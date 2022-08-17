@@ -12,7 +12,7 @@ services:
       - "host.docker.internal:172.17.0.1"
 
   db:
-    image: postgres
+    image: postgres:9.4
     restart: always
     tty: true
     volumes:
