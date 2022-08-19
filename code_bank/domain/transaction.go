@@ -13,7 +13,7 @@ type TransactionRepository interface {
 }
 
 type Transaction struct {
-	ID           string
+	ID           string 
 	Amount       float64
 	Status       string
 	Description  string

@@ -22,11 +22,9 @@ func (k *KafkaProducer) Publish(msg string, topic string) error {
 		TopicPartition: ckafka.TopicPartition{Topic: &topic, Partition: ckafka.PartitionAny},
 		Value:          []byte(msg),
 	}
-
 	err := k.Producer.Produce(message, nil)
 	if err != nil {
 		return err
 	}
-
 	return nil
 }
